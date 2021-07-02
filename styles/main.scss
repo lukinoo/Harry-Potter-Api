@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background: #545454;
+    nav {
+        min-height: 15vh;
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            h1 {
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: #eee;
+            }
+        }
+        .search {
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-family: inherit;
+            outline: none;
+            border: none;
+        }
+    }
+}
+
+section {
+    width: 90%;
+    margin: auto;
+    .container {
+        min-height: 85vh;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .character-info {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            min-height: 50vh;
+            align-items: center;
+            justify-content: space-around;
+            box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+            border-radius: 15px;
+            margin: 0.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            &:hover {
+                box-shadow: rgba(17, 17, 26, 0.09) 0px 1px 0px, rgba(17, 17, 26, 0.5) 0px 0px 8px;
+                transform: scale(0.89);
+                .extra-information {
+                    transform: translateY(0%);
+                }
+            }
+            .extra-information {
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                display: flex;
+                justify-content: space-around;
+                flex-direction: column;
+                align-items: center;
+                color: #fff;
+                font-size: 1.1rem;
+                transform: translateY(100%);
+                border-radius: 15px;
+                background: rgb(83, 103, 110);
+                border: 1px solid #eee;
+                z-index: 10;
+                transition: transform 0.6s ease;
+            }
+            .name {
+                text-decoration: none;
+                color: rgba(26, 26, 117, 0.863);
+            }
+            .image {
+                height: 150px;
+            }
+        }
+    }
+}
